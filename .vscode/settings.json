@@ -1,4 +1,31 @@
 {
     "python-envs.defaultEnvManager": "ms-python.python:conda",
-    "python-envs.defaultPackageManager": "ms-python.python:conda"
+    "python-envs.defaultPackageManager": "ms-python.python:conda",
+
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk (biber)",
+            "tools": ["latexmk"]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.outDir": "%DIR%/out_dir",
+    "latex-workshop.latex.rootFile.doNotPrompt": true,
+    "latex-workshop.latex.rootFile.useSubFileAsRoot": false,
+    "latex-workshop.latex.rootFile.paths": [
+        "LATEX/main.tex"
+    ]
 }
